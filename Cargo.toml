@@ -1,0 +1,41 @@
+[package]
+name = "voyager"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.72"
+async-trait = "0.1.71"
+axum = { version = "0.6.19", features = ["macros"] }
+axum-auth = "0.4.0"
+azalea = "0.7.0"
+azalea-client = "0.7.0"
+azalea-protocol = "0.7.0"
+base64 = "0.21.2"
+chrono = "0.4.26"
+craftping = { version = "0.4.1", features = ["async-tokio"] }
+enum-as-inner = "0.6.0"
+env_logger = "0.10.0"
+futures = "0.3.28"
+hyper = "0.14.27"
+ipnet = "2.8.0"
+iprange = "0.6.7"
+log = "0.4.19"
+once_cell = "1.18.0"
+rand = "0.8.5"
+regex = "1.9.1"
+reqwest = "0.11.18"
+sea-orm = { version = "0.11.3", features = [ "sqlx-postgres", "runtime-tokio-native-tls", "macros" ] }
+serde = "1.0.171"
+serde_json = "1.0.103"
+serenity = "0.11.6"
+tokio = { version = "1.29.1", features = ["full"] }
+tower = "0.4.13"
+uuid = "1.4.0"
+
+[profile.dev]
+opt-level = 1
+[profile.dev.package."*"]
+opt-level = 3

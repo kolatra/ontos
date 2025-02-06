@@ -1,0 +1,7 @@
+/target
+/ganymede-deploy
+.env
+.env.prod
+a.md
+.data/
+ips.json

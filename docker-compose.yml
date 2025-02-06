@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+  base:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ghcr.io/kolatra/base:latest
+
+  europa:
+    build:
+      context: .
+      dockerfile: crates/europa/Dockerfile
+    image: ghcr.io/kolatra/europa:latest
+
+  ganymede:
+    build: 
+      context: .
+      dockerfile: crates/ganymede/Dockerfile
+    image: ghcr.io/kolatra/ganymede:latest
+
+  voyager:
+    build: 
+      context: .
+      dockerfile: crates/voyager/Dockerfile
+    image: ghcr.io/kolatra/voyager:latest
+    
